@@ -1,0 +1,56 @@
+@import '@styles/theme.module.scss';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    background-color: $snow-white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.title {
+    font: $extra-large-thin-title;
+    text-align: center;
+    letter-spacing: 0.4rem;
+
+    @media only screen and (max-width: $mobile-width) {
+        font-size: 3rem;
+    }
+}
+
+.paragraph {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    font: $medium-title;
+
+    @media only screen and (max-width: $mobile-width) {
+        font-size: 1rem;
+    }
+}
+
+.text {
+    width: 60%;
+}
+
+.button {
+    font: $small-text;
+    text-align: center;
+    background-color: $black;
+    color: $white;
+    border-radius: 100px;
+    align-self: center;
+    padding-right: 26px;
+    padding-left: 26px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.image {
+    align-self: center;
+    height: 14em;
+    margin-top: 1em;
+    width: 24em;
+}
