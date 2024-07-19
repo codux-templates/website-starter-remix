@@ -1,12 +1,11 @@
 import { createBoard } from '@wixc3/react-board';
 import { createRemixStub } from '@remix-run/testing';
 import { Outlet } from '@remix-run/react';
-
 import { Layout } from '../../../app/root';
+import HomePage from '../../../app/routes/_index';
+import AboutPage from '../../../app/routes/about';
 
-import HomePage, { loader } from '../../../app/routes/_index';
-
-const Router = createRemixStub([
+const App = createRemixStub([
     {
         Component: () => {
             return (
@@ -19,15 +18,18 @@ const Router = createRemixStub([
             {
                 path: '/',
                 Component: HomePage,
-                loader,
+            },
+            {
+                path: '/about',
+                Component: AboutPage,
             },
         ],
     },
 ]);
 
 export default createBoard({
-    name: 'SiteWrapper',
-    Board: () => <Router />,
+    name: 'App',
+    Board: () => <App />,
     isSnippet: true,
     environmentProps: {
         canvasWidth: 840,
