@@ -8,7 +8,7 @@ import {
     useRouteError,
 } from '@remix-run/react';
 import { SiteWrapper } from '~/components/site-wrapper/site-wrapper';
-import '~/styles/index.css';
+import '~/styles/index.scss';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
