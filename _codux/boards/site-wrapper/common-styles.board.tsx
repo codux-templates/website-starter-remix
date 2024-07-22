@@ -1,16 +1,13 @@
 import { createBoard } from '@wixc3/react-board';
 import commonStyles from '../../../src/styles/common-styles.module.scss';
 import boardStyle from './documentation.module.scss';
-import Classnames from 'classnames';
 
 export default createBoard({
     name: 'Theme Styles',
     Board: () => (
         <div className={boardStyle.root}>
             <div className={boardStyle.box}>
-                <button className={Classnames(commonStyles.primaryButton, styles.button1)}>
-                    Primary Button
-                </button>
+                <button className={commonStyles.primaryButton}>Primary Button</button>
                 <button className={commonStyles.secondaryButton}>Secondary Button</button>
             </div>
             <div className={boardStyle.box}>
