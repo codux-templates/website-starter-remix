@@ -5,9 +5,12 @@ import {
     Scripts,
     ScrollRestoration,
     isRouteErrorResponse,
+    useNavigate,
     useRouteError,
 } from '@remix-run/react';
+import { useEffect } from 'react';
 import { SiteWrapper } from '~/components/site-wrapper/site-wrapper';
+import { ROUTES } from '~/router/config';
 import '~/styles/index.scss';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -20,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Links />
             </head>
             <body>
-                <SiteWrapper>{children}</SiteWrapper>
+                {children}
                 <ScrollRestoration />
                 <Scripts />
             </body>
@@ -29,28 +32,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-    return <Outlet />;
+    return (
+        <SiteWrapper>
+            <Outlet />
+        </SiteWrapper>
+    );
 }
 
 export function ErrorBoundary() {
-    let error = useRouteError();
-    console.log(error);
+    const error = useRouteError();
+    const navigate = useNavigate();
 
-    if (isRouteErrorResponse(error)) {
-        return (
-            <>
-                <h1>
-                    {error.status} {error.statusText}
-                </h1>
-                <p>{error.data}</p>
-            </>
-        );
-    }
+    const isRouteError = isRouteErrorResponse(error);
 
-    if (error instanceof Error) {
-        error = error.message;
-    } else {
-        error = JSON.stringify(error);
+    useEffect(() => {
+        if (isRouteError) {
+            let title: string = `${error.status} - ${error.statusText}`;
+            let message: string | undefined = error.data?.message ?? undefined;
+
+            if (error.status === 404) {
+                title = 'Page Not Found';
+                message = `Looks like this page doesn't exist. Make sure that link is correct.`;
+            }
+
+            // hack to handle https://github.com/remix-run/remix/issues/1136
+            window.location.href = ROUTES.error.to(title, message);
+        }
+    }, [isRouteError, navigate, error]);
+
+    if (isRouteError) {
+        // we are navigating to the error page in the effect above
+        return null;
     }
 
     return (

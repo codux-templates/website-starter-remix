@@ -1,12 +1,12 @@
 import { createBoard } from '@wixc3/react-board';
+import ErrorPage from '../../../app/routes/error';
 import { PageWrapper } from '_codux/board-wrappers/page-wrapper';
-import HomePage from 'app/routes/_index';
 
 export default createBoard({
-    name: 'Page - Home',
+    name: 'Page - Error 404',
     Board: () => (
-        <PageWrapper>
-            <HomePage />
+        <PageWrapper initialPath="/error?title=Page Not Found">
+            <ErrorPage />
         </PageWrapper>
     ),
 });

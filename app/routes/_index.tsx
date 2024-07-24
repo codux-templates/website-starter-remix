@@ -1,14 +1,46 @@
 import classNames from 'classnames';
 import styles from './_index.module.scss';
+import { MetaFunction } from '@remix-run/react';
+import { LinksFunction } from '@remix-run/node';
 import commonStyles from '../../src/styles/common-styles.module.scss';
 
-export interface HomePageProps {
-    className?: string;
-}
+export const meta: MetaFunction = () => {
+    return [
+        { title: 'Website Starter' },
+        { description: 'Website Starter - Description' },
+        {
+            property: 'og:title',
+            content: 'Website Starter - Title',
+        },
+        {
+            name: 'og:description',
+            content: 'Website Starter - Description',
+        },
+        {
+            name: 'og:image',
+            content: 'https://my-website/og-image.png',
+        },
+        {
+            tagName: 'link',
+            rel: 'canonical',
+            href: 'https://my-website/',
+        },
+    ];
+};
 
-export default function HomePage({ className }: HomePageProps) {
+export const links: LinksFunction = () => {
+    return [
+        {
+            rel: 'icon',
+            href: '/favicon.ico',
+            type: 'image/ico',
+        },
+    ];
+};
+
+export default function HomePage() {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={styles.root}>
             <div className={styles.title}>I&apos;M A TITLE</div>
             <div className={styles.paragraph}>
                 <div className={styles.text}>

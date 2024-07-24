@@ -5,6 +5,7 @@
     "exclude": ["src/_codux/component-templates/**"]
   },
   "boardsPath": "_codux/boards",
+  "boardGlobalSetup": "_codux/board-global-setup.ts",
   "newComponent": {
     "componentsPath": "src/components"
   },
