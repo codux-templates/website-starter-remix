@@ -21,7 +21,6 @@ export function PageWrapper(props: PageWrapperProps) {
             ...rootRouteParams,
             Component: () => <App />,
             id: 'root',
-            path: '/',
             children: [
                 ...Object.values(ROUTES).map(({ path }) => ({
                     ...pageRouteParams,
