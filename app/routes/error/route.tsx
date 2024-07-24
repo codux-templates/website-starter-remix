@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from '@remix-run/react';
-import styles from './error.module.scss';
 import { ROUTES } from '~/router/config';
-import commonStyles from '../../src/styles/common-styles.module.scss';
+import commonStyles from '~/styles/common-styles.module.scss';
+import styles from './error.module.scss';
 
 const defaultErrorMessage = 'Ooops, something went wrong';
 

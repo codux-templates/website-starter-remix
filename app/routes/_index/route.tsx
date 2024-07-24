@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import styles from './_index.module.scss';
 import { MetaFunction } from '@remix-run/react';
 import { LinksFunction } from '@remix-run/node';
-import commonStyles from '../../src/styles/common-styles.module.scss';
+import commonStyles from '~/styles/common-styles.module.scss';
 
 export const meta: MetaFunction = () => {
     return [
@@ -41,7 +41,7 @@ export const links: LinksFunction = () => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
-            <div className={styles.title}>I&apos;M A TITLE</div>
+            <div className={styles.title}>I&apos;M A HOME PAGE</div>
             <div className={styles.paragraph}>
                 <div className={styles.text}>
                     I’m a paragraph. Add your own text and edit me on properties panel on the right.

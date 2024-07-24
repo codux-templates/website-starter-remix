@@ -41,7 +41,6 @@ export default function App() {
 
 export function ErrorBoundary() {
     const error = useRouteError();
-    const navigate = useNavigate();
 
     const isRouteError = isRouteErrorResponse(error);
 
@@ -58,7 +57,7 @@ export function ErrorBoundary() {
             // hack to handle https://github.com/remix-run/remix/issues/1136
             window.location.href = ROUTES.error.to(title, message);
         }
-    }, [isRouteError, navigate, error]);
+    }, [isRouteError, error]);
 
     if (isRouteError) {
         // we are navigating to the error page in the effect above
