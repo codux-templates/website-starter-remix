@@ -5,7 +5,6 @@ import {
     Scripts,
     ScrollRestoration,
     isRouteErrorResponse,
-    useNavigate,
     useRouteError,
 } from '@remix-run/react';
 import { useEffect } from 'react';
