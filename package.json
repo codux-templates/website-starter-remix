@@ -1,5 +1,6 @@
 {
-  "name": "remix-shop-template",
+  "name": "website-starter-remix",
+  "version": "1.0.0",
   "private": true,
   "sideEffects": false,
   "type": "module",
