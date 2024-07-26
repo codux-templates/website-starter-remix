@@ -1,14 +1,18 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 import { createRemixStub } from '@remix-run/testing';
 import { ROUTES } from '~/router/config';
 
-export default function ComponentWrapper(props: { children?: ReactNode }) {
+export interface ComponentWrapperProps extends PropsWithChildren {
+    loaderData?: Record<string, unknown>;
+}
+
+export default function ComponentWrapper({ children, loaderData }: ComponentWrapperProps) {
     const RemixStub = createRemixStub([
         {
-            Component: () => props.children,
+            Component: () => children,
             children: [...Object.values(ROUTES).map(({ path }) => ({ path }))],
         },
     ]);
 
-    return <RemixStub />;
+    return <RemixStub hydrationData={{ loaderData }} />;
 }
