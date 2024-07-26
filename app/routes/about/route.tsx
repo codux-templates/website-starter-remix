@@ -1,14 +1,16 @@
-import classNames from 'classnames';
+import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
+import { ROUTES } from '~/router/config';
 import styles from './about.module.scss';
-import { LinksFunction, MetaFunction } from '@remix-run/node';
 
-export interface AboutPageProps {
-    className?: string;
-}
+export const loader = ({ request }: LoaderFunctionArgs) => {
+    const originUrl = new URL(request.url).origin;
 
-export default function AboutPage({ className }: AboutPageProps) {
+    return { canonicalUrl: new URL(ROUTES.about.path, originUrl).toString() };
+};
+
+export default function AboutPage() {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={styles.root}>
             <div className={styles.text}>
                 <h1 className={styles.title}>I&apos;M AN ABOUT PAGE</h1>
                 <p className={styles.paragraph}>
@@ -27,16 +29,25 @@ export default function AboutPage({ className }: AboutPageProps) {
     );
 }
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    const title = 'Website Starter - About Page';
+    const description = 'Welcome to the Website Starter About Page';
+    const imageUrl = 'https://website-starter.com/og-image.png';
+
     return [
-        { title: 'Website Starter - About' },
+        { title },
         {
             name: 'description',
-            content: 'Welcome to the Website Starter About page',
+            content: description,
         },
         {
             name: 'author',
             content: 'Codux',
+        },
+        {
+            tagName: 'link',
+            rel: 'canonical',
+            href: data?.canonicalUrl,
         },
         {
             property: 'robots',
@@ -44,15 +55,15 @@ export const meta: MetaFunction = () => {
         },
         {
             property: 'og:title',
-            content: 'Website Starter - About',
+            content: title,
         },
         {
             property: 'og:description',
-            content: 'Welcome to the Website Starter About page',
+            content: description,
         },
         {
             property: 'og:image',
-            content: 'https://my-website/og-image.png',
+            content: imageUrl,
         },
         {
             name: 'twitter:card',
@@ -60,15 +71,15 @@ export const meta: MetaFunction = () => {
         },
         {
             name: 'twitter:title',
-            content: 'Website Starter - About',
+            content: title,
         },
         {
             name: 'twitter:description',
-            content: 'Welcome to the Website Starter About page',
+            content: description,
         },
         {
             name: 'twitter:image',
-            content: 'https://my-website/twitter-image.png',
+            content: imageUrl,
         },
     ];
 };
@@ -79,10 +90,6 @@ export const links: LinksFunction = () => {
             rel: 'icon',
             href: '/favicon.ico',
             type: 'image/ico',
-        },
-        {
-            rel: 'canonical',
-            href: 'https://website-starter.com',
         },
     ];
 };
