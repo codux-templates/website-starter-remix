@@ -1,42 +1,7 @@
 import classNames from 'classnames';
 import styles from './_index.module.scss';
-import { MetaFunction } from '@remix-run/react';
-import { LinksFunction } from '@remix-run/node';
+import { LinksFunction, MetaFunction } from '@remix-run/node';
 import commonStyles from '~/styles/common-styles.module.scss';
-
-export const meta: MetaFunction = () => {
-    return [
-        { title: 'Website Starter' },
-        { description: 'Website Starter - Description' },
-        {
-            property: 'og:title',
-            content: 'Website Starter - Title',
-        },
-        {
-            name: 'og:description',
-            content: 'Website Starter - Description',
-        },
-        {
-            name: 'og:image',
-            content: 'https://my-website/og-image.png',
-        },
-        {
-            tagName: 'link',
-            rel: 'canonical',
-            href: 'https://my-website/',
-        },
-    ];
-};
-
-export const links: LinksFunction = () => {
-    return [
-        {
-            rel: 'icon',
-            href: '/favicon.ico',
-            type: 'image/ico',
-        },
-    ];
-};
 
 export default function HomePage() {
     return (
@@ -61,3 +26,63 @@ export default function HomePage() {
         </div>
     );
 }
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: 'Website Starter' },
+        {
+            name: 'description',
+            content: 'Welcome to the Website Starter',
+        },
+        {
+            name: 'author',
+            content: 'Codux',
+        },
+        {
+            property: 'robots',
+            content: 'index, follow',
+        },
+        {
+            property: 'og:title',
+            content: 'Website Starter',
+        },
+        {
+            property: 'og:description',
+            content: 'Welcome to the Website Starter',
+        },
+        {
+            property: 'og:image',
+            content: 'https://my-website/og-image.png',
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+        },
+        {
+            name: 'twitter:title',
+            content: 'Website Starter',
+        },
+        {
+            name: 'twitter:description',
+            content: 'Welcome to the Website Starter',
+        },
+        {
+            name: 'twitter:image',
+            content: 'https://my-website/twitter-image.png',
+        },
+    ];
+};
+
+export const links: LinksFunction = () => {
+    return [
+        {
+            rel: 'icon',
+            href: '/favicon.ico',
+            type: 'image/ico',
+        },
+        {
+            rel: 'canonical',
+            href: 'https://website-starter.com',
+        },
+    ];
+};

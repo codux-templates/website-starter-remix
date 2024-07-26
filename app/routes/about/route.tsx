@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import styles from './about.module.scss';
+import { LinksFunction, MetaFunction } from '@remix-run/node';
 
 export interface AboutPageProps {
     className?: string;
@@ -25,3 +26,63 @@ export default function AboutPage({ className }: AboutPageProps) {
         </div>
     );
 }
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: 'Website Starter - About' },
+        {
+            name: 'description',
+            content: 'Welcome to the Website Starter About page',
+        },
+        {
+            name: 'author',
+            content: 'Codux',
+        },
+        {
+            property: 'robots',
+            content: 'index, follow',
+        },
+        {
+            property: 'og:title',
+            content: 'Website Starter - About',
+        },
+        {
+            property: 'og:description',
+            content: 'Welcome to the Website Starter About page',
+        },
+        {
+            property: 'og:image',
+            content: 'https://my-website/og-image.png',
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+        },
+        {
+            name: 'twitter:title',
+            content: 'Website Starter - About',
+        },
+        {
+            name: 'twitter:description',
+            content: 'Welcome to the Website Starter About page',
+        },
+        {
+            name: 'twitter:image',
+            content: 'https://my-website/twitter-image.png',
+        },
+    ];
+};
+
+export const links: LinksFunction = () => {
+    return [
+        {
+            rel: 'icon',
+            href: '/favicon.ico',
+            type: 'image/ico',
+        },
+        {
+            rel: 'canonical',
+            href: 'https://website-starter.com',
+        },
+    ];
+};
