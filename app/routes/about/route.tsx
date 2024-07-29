@@ -41,10 +41,6 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             content: description,
         },
         {
-            name: 'author',
-            content: 'Codux',
-        },
-        {
             tagName: 'link',
             rel: 'canonical',
             href: data?.canonicalUrl,
