@@ -44,34 +44,32 @@ export function ErrorBoundary() {
     const isRouteError = isRouteErrorResponse(error);
 
     useEffect(() => {
-        if (isRouteError) {
-            let title: string = `${error.status} - ${error.statusText}`;
-            let message: string | undefined = error.data?.message ?? undefined;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const { title, message } = getErrorDetails(error);
 
-            if (error.status === 404) {
-                title = 'Page Not Found';
-                message = `Looks like this page doesn't exist. Make sure that link is correct.`;
-            }
-
-            // hack to handle https://github.com/remix-run/remix/issues/1136
-            window.location.href = ROUTES.error.to(title, message);
-        }
+        // hack to handle https://github.com/remix-run/remix/issues/1136
+        window.location.href = ROUTES.error.to(title, message);
     }, [isRouteError, error]);
 
-    if (isRouteError) {
-        // we are navigating to the error page in the effect above
-        return null;
+    // we are navigating to the error page in the effect above
+    return null;
+}
+
+function getErrorDetails(error: unknown) {
+    let title: string;
+    let message: string | undefined;
+
+    if (isRouteErrorResponse(error)) {
+        if (error.status === 404) {
+            title = 'Page Not Found';
+            message = "Looks like the page you're trying to visit doesn't exist";
+        } else {
+            title = `${error.status} - ${error.statusText}`;
+            message = error.data?.message ?? '';
+        }
+    } else {
+        title = 'Unknown error ocurred';
     }
 
-    return (
-        <section
-            style={{
-                color: 'red',
-                fontSize: 18,
-                textAlign: 'center',
-            }}
-        >
-            {String(error)}
-        </section>
-    );
+    return { title, message };
 }
