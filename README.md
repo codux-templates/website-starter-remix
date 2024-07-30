@@ -1,68 +1,29 @@
-# Welcome to Remix!
+<div align="center">  
+    <img height="50" src="./src/assets/codux.svg">  
+    <h1><img height="30" src="./src/assets/vite.svg"> Vite template for Codux</h1>
+</div>
 
-- [Remix Docs](https://remix.run/docs)
-- [Netlify Functions Overview](https://docs.netlify.com/functions/overview)
+### A Visual IDE for React Projects
 
-## Netlify Setup
+Codux is an all-in-one visual development environment. Whether you’re starting a new app, creating components, or editing an existing project, every visual change you make reflects instantly in the code and vice versa. To learn more about Codux, visit our website - [https://www.codux.com/](https://www.codux.com/)
 
-1. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/):
+This project was bootstrapped with [`Remix`](https://remix.run/).
 
-```sh
-npm i -g netlify-cli
-```
+It includes a single React component to start your project with, a sample [`codux.config.json`](codux.config.json) with preconfigured keys, a `package.json` file to describe the project's packages and dependencies, and a folder and component structure to put everything neatly in its place.
 
-If you have previously installed the Netlify CLI, you should update it to the latest version:
+- Edit, render and compose apps that make use of **`React`**-based components.
+- Create components with **`TypeScript`**, **`SCSS`** and **`CSS Modules`** support.
+- Visually edit in real-time and in an isolated environment.
 
-```sh
-npm i -g netlify-cli@latest
-```
+### Available Scripts
 
-2. Sign up and log in to Netlify:
+In the project directory, you can run:
 
-```sh
-netlify login
-```
+### `npm run build`
 
-3. Create a new site:
+Build the application in production mode into a folder named `dist`. This folder can be served using any HTTP server.
 
-```sh
-netlify init
-```
+### `npm run dev`
 
-## Development
-
-Ensure all packages are installed by running:
-
-```sh
-npm install
-```
-
-Run
-
-```sh
-netlify dev
-```
-
-Open up [http://localhost:8888](http://localhost:8888), and you're ready to go!
-
-### Serve your site locally
-
-To serve your site locally in a production-like environment, run
-
-```sh
-netlify serve
-```
-
-Your site will be available at [http://localhost:8888](http://localhost:8888). Note that it will not auto-reload when you make changes.
-
-## Deployment
-
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-# preview deployment
-netlify deploy --build
-
-# production deployment
-netlify deploy --build --prod
-```
+Start dev server.\
+Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
