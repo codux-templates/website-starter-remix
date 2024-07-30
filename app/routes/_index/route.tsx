@@ -2,9 +2,10 @@ import classNames from 'classnames';
 import styles from './_index.module.scss';
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
 import commonStyles from '~/styles/common-styles.module.scss';
+import { getUrlOriginWithPath } from '~/utils';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
-    return { canonicalUrl: new URL(request.url).origin };
+    return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
 export default function HomePage() {

@@ -1,11 +1,9 @@
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
-import { ROUTES } from '~/router/config';
+import { getUrlOriginWithPath } from '~/utils';
 import styles from './about.module.scss';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
-    const originUrl = new URL(request.url).origin;
-
-    return { canonicalUrl: new URL(ROUTES.about.path, originUrl).toString() };
+    return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
 export default function AboutPage() {
