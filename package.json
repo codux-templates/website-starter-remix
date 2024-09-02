@@ -11,6 +11,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@netlify/remix-adapter": "^2.4.0",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "@types/node": "^20.14.8",
@@ -20,8 +21,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@remix-run/testing": "^2.10.0",
     "@remix-run/dev": "^2.9.2",
+    "@remix-run/testing": "^2.10.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
