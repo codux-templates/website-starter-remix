@@ -43,16 +43,15 @@ export default function UploadFile() {
 
     return (
         <div>
-            <p>
-                This file have 3 examples functions of some kind from remix-run/node-
-                <br />
-                <ul>
-                    <li>unstable_createFileUploadHandler</li>
-                    <li>unstable_parseMultipartFormData</li>
-                    <li>json</li>
-                </ul>
-                <br /> that we do not support. It also shows that we dont handle the path package.
-            </p>
+            <p>This file have 3 examples functions of some kind from remix-run/node:</p>
+            <br />
+            <ul>
+                <li>unstable_createFileUploadHandler</li>
+                <li>unstable_parseMultipartFormData</li>
+                <li>json</li>
+            </ul>
+            <br />
+            <p>that we do not support. It also shows that we dont handle the path package.</p>
             <br />
             <br />
             <h2>Upload a File</h2>
