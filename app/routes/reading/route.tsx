@@ -1,6 +1,5 @@
-import React from 'react';
-import { readableStreamToString, createReadableStreamFromReadable } from "@remix-run/node";
-import { Readable } from "stream"; // -----------------------------------------------> Cannot handle this import also
+import { readableStreamToString, createReadableStreamFromReadable } from '@remix-run/node';
+import { Readable } from 'stream'; // -----------------------------------------------> Cannot handle this import also
 import { useLoaderData } from '@remix-run/react';
 
 /**
@@ -10,20 +9,34 @@ import { useLoaderData } from '@remix-run/react';
  */
 
 export async function loader() {
-  // Create a Node.js readable stream
-  const nodeStream = Readable.from("Stream data");
+    // Create a Node.js readable stream
+    const nodeStream = Readable.from('You successfully read this stream!');
 
-  // Convert the stream to a web-compatible ReadableStream
-  const readableStream = createReadableStreamFromReadable(nodeStream); // ------------> first
+    // Convert the stream to a web-compatible ReadableStream
+    const readableStream = createReadableStreamFromReadable(nodeStream); // ------------> first
 
-  // Convert the readable stream to a string
-  const streamString = await readableStreamToString(readableStream); // --------------> second
+    // Convert the readable stream to a string
+    const streamString = await readableStreamToString(readableStream); // --------------> second
 
-  return new Response(`Stream as string: ${streamString}`);
+    return streamString;
 }
 
 export default function Reading() {
-    const { something } = useLoaderData<typeof loader>();
+    const streamString = useLoaderData<typeof loader>();
 
-    return <div>{something}</div>;
+    return (
+        <div>
+            <p>This file have 2 examples of read functions of some kind from remix-run/node:</p>
+            <br />
+            <ul>
+                <li>createReadableStreamFromReadable</li>
+                <li>readableStreamToString</li>
+            </ul>
+            <br />
+            <p>that we do not support.</p>
+            <br />
+            <br />
+            <div>{streamString}</div>
+        </div>
+    );
 }
