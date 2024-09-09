@@ -1,10 +1,9 @@
+import { LoaderFunctionArgs } from '@remix-run/node';
+import { Form, useActionData } from '@remix-run/react';
 import {
-    createReadableStreamFromReadable,
-    writeAsyncIterableToWritable,
-    writeReadableStreamToWritable,
-} from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
-import { Readable, Writable } from 'stream'; // -----------------------------------------------> Cannot handle this import also
+    writeAsyncIterableToWritableWrapper,
+    writeReadableStreamToWritableWrapper,
+} from 'app/writing';
 
 /**
  * This file have 2 examples of write functions of some kind from remix-run/node-
@@ -12,45 +11,66 @@ import { Readable, Writable } from 'stream'; // --------------------------------
  * that we do not support.
  */
 
-export async function loader() {
-    // Async generator yielding chunks of data
-    async function* asyncGenerator(): AsyncIterable<Uint8Array> {
-        yield new TextEncoder().encode('Hello, ');
-        yield new TextEncoder().encode('world!');
-    }
-
-    // Create a writable stream that logs output
-    const writableStream = new Writable({
-        write(chunk, encoding, callback) {
-            console.log(chunk.toString());
-            callback();
-        },
-    });
-
-    // Write the async iterable data to the writable stream
-    await writeAsyncIterableToWritable(asyncGenerator(), writableStream); // --------> first
-
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    // Create a Node.js readable stream
-    const readableStream = createReadableStreamFromReadable(Readable.from('Stream data')); // another problematic but its read and not write
-
-    // Create a writable stream that logs output
-    const writableStreamAnother = new Writable({
-        write(chunk, encoding, callback) {
-            console.log('Writable received:', chunk.toString());
-            callback();
-        },
-    });
-
-    // Write the readable stream to the writable stream
-    await writeReadableStreamToWritable(readableStream, writableStreamAnother); // -------> second
-
-    return new Response('Data written to the writable stream');
+export interface WroteSomethingType {
+    first: string;
+    second: string;
 }
 
-export default function Writing() {
-    const { something } = useLoaderData<typeof loader>();
+let wroteSomethingTemplate: WroteSomethingType = {
+    first: '',
+    second: '',
+};
 
-    return <div>{something}</div>;
+export const action = async ({ request }: LoaderFunctionArgs) => {
+    const wantedAction = await request.formData();
+
+    if (wantedAction.get('writeAsyncIterableToWritable')) {
+        wroteSomethingTemplate = await writeAsyncIterableToWritableWrapper(wroteSomethingTemplate);
+    } else {
+        wroteSomethingTemplate = await writeReadableStreamToWritableWrapper(wroteSomethingTemplate);
+    }
+    return wroteSomethingTemplate;
+};
+
+export default function Writing() {
+    const wroteSomething = useActionData<typeof action>();
+
+    return (
+        <div>
+            <p>This file have 2 examples of write functions of some kind from remix-run/node:</p>
+            <br />
+            <ul>
+                <li>writeAsyncIterableToWritable</li>
+                <li>writeReadableStreamToWritable</li>
+            </ul>
+            <br />
+            <p>that we do not support.</p>
+            <br />
+            <br />
+            <div>
+                <Form method="post">
+                    <button
+                        type="submit"
+                        name="writeAsyncIterableToWritable"
+                        value="writeAsyncIterableToWritable"
+                    >
+                        Write async iterable to writable stream
+                    </button>
+                </Form>
+                <p>we wrote this: {wroteSomething?.first}</p>
+            </div>
+            <div>
+                <Form method="post">
+                    <button
+                        type="submit"
+                        name="writeReadableStreamToWritable"
+                        value="writeReadableStreamToWritable"
+                    >
+                        Write readable stream to writable stream
+                    </button>
+                </Form>
+                <p>we wrote this: {wroteSomething?.second}</p>
+            </div>
+        </div>
+    );
 }

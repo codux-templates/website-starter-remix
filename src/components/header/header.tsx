@@ -52,6 +52,12 @@ export const Header = ({ className }: HeaderProps) => {
                     Read
                 </Link>
                 <Link
+                    to="/writing"
+                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                >
+                    Write
+                </Link>
+                <Link
                     to={ROUTES.about.to()}
                     className={classNames(commonStyles.secondaryButton, styles.menuButton)}
                 >
