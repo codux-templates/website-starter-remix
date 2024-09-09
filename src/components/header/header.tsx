@@ -22,6 +22,24 @@ export const Header = ({ className }: HeaderProps) => {
                     Home
                 </Link>
                 <Link
+                    to="/install-globals"
+                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                >
+                    Install-globals
+                </Link>
+                <Link
+                    to="/upload-file"
+                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                >
+                    Upload file
+                </Link>
+                <Link
+                    to="/cookie-page"
+                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                >
+                    Sessions
+                </Link>
+                <Link
                     to={ROUTES.about.to()}
                     className={classNames(commonStyles.secondaryButton, styles.menuButton)}
                 >
