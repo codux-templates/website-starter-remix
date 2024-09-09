@@ -39,3 +39,7 @@ export const getContactId = (contactName: string) => {
     }
     return -1;
 };
+
+export const getContactsCount = () => {
+    return Object.keys(contacts).length;
+};
