@@ -6,7 +6,7 @@ import {
     getContactsCount,
     getContactsName,
     isContactExist,
-} from 'app/data';
+} from 'app/contacts.server';
 import { redirect } from '@remix-run/node';
 
 /**

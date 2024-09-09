@@ -1,5 +1,5 @@
 import { useLoaderData } from '@remix-run/react';
-import { fetchExample } from 'app/globals-server';
+import { fetchExample } from 'app/globals.server';
 
 /**
  * This file have installGlobals() from remix-run/node-

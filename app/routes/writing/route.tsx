@@ -3,7 +3,7 @@ import { Form, useActionData } from '@remix-run/react';
 import {
     writeAsyncIterableToWritableWrapper,
     writeReadableStreamToWritableWrapper,
-} from 'app/writing';
+} from 'app/writing.server';
 
 /**
  * This file have 2 examples of write functions of some kind from remix-run/node-
