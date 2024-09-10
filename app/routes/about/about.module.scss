@@ -1,23 +1,30 @@
 @import '@styles/theme.module.scss';
 
 .root {
+    font: $large-font;
     display: flex;
     flex-direction: row;
     background-color: $snow-white;
-    column-gap: 80px;
+    padding-top: 2em;
+    padding-bottom: 3em;
     justify-content: center;
-    align-content: center;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-right: 7em;
+    padding-left: 7em;
+    column-gap: 5em;
 }
 
 .paragraph {
-    margin-bottom: 24px;
-    font: $medium-title;
+    margin-bottom: 1.5em;
+    font: $paragraph-font;
 }
 
 .text {
-    width: 40vw;
+    text-align: start;
+    width: 50vw;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
 }
 
 .image {
@@ -25,9 +32,8 @@
 }
 
 .title {
-    font: $extra-large-thin-title;
-    letter-spacing: 6px;
-    margin-bottom: 16px;
+    font: $title-font;
+    letter-spacing: 0.4rem;
 }
 
 @media (width <= 430px) {
