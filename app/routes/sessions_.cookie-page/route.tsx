@@ -24,7 +24,7 @@ export async function action({ request }: ActionFunctionArgs) {
         cookie.showBanner = false;
     }
 
-    return redirect('/', {
+    return redirect('/sessions', {
         headers: {
             'Set-Cookie': await userPrefs.serialize(cookie),
         },
