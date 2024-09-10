@@ -42,10 +42,10 @@ export default createBoard({
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>MENU</h4>
                 <div className={classNames(styles.menuContainer, styles.itemSpacing)}>
-                    <Link to="" className={classNames(commonStyles.secondaryButton)}>
+                    <Link to="" className={commonStyles.secondaryButton}>
                         Home
                     </Link>
-                    <Link to="" className={classNames(commonStyles.secondaryButton)}>
+                    <Link to="" className={commonStyles.secondaryButton}>
                         About
                     </Link>
                 </div>
