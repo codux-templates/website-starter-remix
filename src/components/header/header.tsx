@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Link } from '@remix-run/react';
+import { Link, NavLink } from '@remix-run/react';
 import { ROUTES } from '~/router/config';
 import commonStyles from '~/styles/common-styles.module.scss';
 import styles from './header.module.scss';
@@ -15,18 +15,18 @@ export const Header = ({ className }: HeaderProps) => {
                 LOGO
             </Link>
             <div className={styles.menu}>
-                <Link
+                <NavLink
                     to="/"
-                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
                 >
                     Home
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to={ROUTES.about.to()}
-                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
                 >
                     About
-                </Link>
+                </NavLink>
             </div>
         </div>
     );

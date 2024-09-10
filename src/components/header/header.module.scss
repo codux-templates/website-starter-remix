@@ -2,16 +2,19 @@
 
 .root {
     display: flex;
+    flex-direction: row;
+    padding-left: 3em;
     justify-content: space-between;
+    padding-right: 3.5em;
     align-items: center;
-    height: 64px;
-    font: $small-text;
-    padding: 0 20px;
+    height: 4em;
+    font: $button-font;
 }
 
 .menu {
     display: flex;
-    align-items: center;
+    column-gap: 2rem;
+    font: $button-font;
 }
 
 .menuButton {
@@ -19,9 +22,9 @@
     padding-left: 22px;
 }
 
-.logo {
-    font: 700 18px/1.5 $my-prettyfont;
-    height: fit-content;
+.active {
+    color: $black;
+    font-weight: 600;
 }
 
 @media (width < 455px) {

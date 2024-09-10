@@ -2,7 +2,7 @@
 
 .intro-button {
     text-align: center;
-    font: $small-text;
+    font: $small-font;
     background-color: $snow-white;
     padding: 10px;
     width: 160px;
@@ -17,10 +17,10 @@
 }
 
 .primaryButton {
-    background-color: $charcoal-black;
+    background-color: $black;
     display: flex;
     align-items: center;
-    font: $small-text;
+    font: $small-font;
     color: $snow-white;
     border-radius: 35px;
     height: 42px;
@@ -30,9 +30,7 @@
     z-index: 1;
 
     &:hover {
-        background-color: $white;
-        border: 1px solid $charcoal-black;
-        color: $charcoal-black;
+        background-color: $charcoal-black;
         cursor: pointer;
     }
 }
@@ -41,19 +39,13 @@
     height: 42px;
     display: flex;
     align-items: center;
-    font: $small-text;
+    font: $small-font;
     border: 1px solid transparent;
     cursor: pointer;
     padding-right: 22px;
     padding-left: 22px;
     border: 1px solid white;
     z-index: 1;
-
-    &:hover {
-        background-color: $white;
-        border: 1px solid black;
-        border-radius: 35px;
-    }
 }
 
 .numberInput {
@@ -63,10 +55,15 @@
     height: 25px;
     width: 60px;
     padding-right: 10px;
-    font: $extra-small-text;
+    font: $small-font;
 }
 
 .price {
     font-weight: 700;
     margin-top: 2px;
+}
+
+.loading {
+    padding: 30px;
+    font: $large-font;
 }
