@@ -1,5 +1,5 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from '@remix-run/node';
-import { json, redirect } from '@remix-run/node';
+import { isCookie, json, redirect } from '@remix-run/node';
 import { useLoaderData, Link, Form } from '@remix-run/react';
 import { userPrefs } from './cookie.server';
 
@@ -46,6 +46,14 @@ export default function CookiePage() {
                 </div>
             ) : null}
             <h1>Welcome!</h1>
+            <p>We will also see if the function isCookie is fine.</p>
+            <br />
+            <p>If it is not, then the page will not load :)</p>
+            <br />
+            <p>
+                If it is, then in the end of this sentence, we should get true:
+                {isCookie(userPrefs) ? ' true' : ' false'}
+            </p>
         </div>
     );
 }
