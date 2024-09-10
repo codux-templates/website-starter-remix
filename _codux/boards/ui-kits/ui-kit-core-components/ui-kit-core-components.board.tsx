@@ -22,21 +22,22 @@ export default createBoard({
                     <hr className={styles.hrSolid} />
                     <h3 className={styles.sectionTitle}>Buttons</h3>
                 </div>
-                
+
                 <h4 className={styles.sectionHeader}>THEMED</h4>
 
                 <div className={classNames(styles.buttonsContainer, styles.itemSpacing)}>
-                    <div className={styles.buttonWrapper}>
+                    <div>
                         <button className={classNames(commonStyles.primaryButton)}>Primary</button>
                         <span className={styles.buttonLabel}>$Primary</span>
                     </div>
 
-                    <div className={classNames(styles.buttonWrapper)}>
+                    <div>
                         <button className={classNames(commonStyles.secondaryButton)}>
                             Secondary
                         </button>
                         <span className={styles.buttonLabel}>$Secondary</span>
                     </div>
+                    
                 </div>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>MENU</h4>
@@ -50,7 +51,7 @@ export default createBoard({
                 </div>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>ICONS</h4>
-                <div className={styles.buttonsContainer}>
+                <div className={styles.iconsContainer}>
                     <a href="/">
                         <img className={styles.icon} src={twitterxIcon} alt="twitter" />
                     </a>
