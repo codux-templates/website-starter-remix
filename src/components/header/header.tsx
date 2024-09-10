@@ -58,6 +58,12 @@ export const Header = ({ className }: HeaderProps) => {
                     Write
                 </Link>
                 <Link
+                    to="/defering"
+                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                >
+                    Defer
+                </Link>
+                <Link
                     to={ROUTES.about.to()}
                     className={classNames(commonStyles.secondaryButton, styles.menuButton)}
                 >
