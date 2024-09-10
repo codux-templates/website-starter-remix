@@ -42,6 +42,14 @@ export default function Sessions() {
                         Memory Session Page
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="/sessions/session-storage"
+                        className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                    >
+                        Session Storage Page
+                    </Link>
+                </li>
             </ul>
         </div>
     );
