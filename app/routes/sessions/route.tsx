@@ -26,6 +26,22 @@ export default function Sessions() {
                         Cookie Page - show/hide banner
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="/sessions/cookie-session"
+                        className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                    >
+                        Cookie Session Page
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/sessions/memory-session"
+                        className={classNames(commonStyles.secondaryButton, styles.menuButton)}
+                    >
+                        Memory Session Page
+                    </Link>
+                </li>
             </ul>
         </div>
     );

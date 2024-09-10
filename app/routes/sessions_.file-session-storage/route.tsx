@@ -9,33 +9,6 @@ import { commitSession, getSession } from './file-session-storage.server'; // --
  * that we do not support.
  */
 
-// Create a cookie
-// const myCookie = createCookie('myCookieName', { maxAge: 3600 }); // --------------------------> second
-
-// create cookie session storage
-// const cookieSessionStorage = createCookieSessionStorage({
-//     // ---------------------------------> third
-//     cookie: {
-//         name: '__session',
-//         secrets: ['another-secret'],
-//         sameSite: 'lax',
-//         path: '/',
-//         httpOnly: true,
-//     },
-// });
-
-// Create memory-based session storage
-// const memorySessionStorage = createMemorySessionStorage({
-//     // ------------------------------------> forth
-//     cookie: {
-//         name: '__session',
-//         secrets: ['yet-another-secret'],
-//         sameSite: 'lax',
-//         path: '/',
-//         httpOnly: true,
-//     },
-// });
-
 // Create custom session storage (for example, store in memory)
 // const sessionStorage = createSessionStorage({
 //     // -------------------------------------------------> fifth
@@ -66,7 +39,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
     const cookieHeader = request.headers.get('Cookie');
     const session = await getSession(cookieHeader);
 
-    const currentValue = session.get('value') || 'No value yet';
+    const currentValue =
+        session.get('value') || 'Please enter a value to be stored in the file session';
 
     return json({ currentValue });
 };
