@@ -6,7 +6,16 @@
     padding: 16px;
 }
 
-.uiKitHeader {
+.uikit {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12.6px;
+    letter-spacing: 0.1em;
+}
+
+.foundation {
+    font-size: 10px;
+    letter-spacing: 0.1em;
 }
 
 .hrSolid {
@@ -18,8 +27,6 @@
 .sectionTitle {
     font-size: 12px;
     font-weight: 800;
-    display: flex;
-    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -36,29 +43,13 @@
     line-height: 12px;
     letter-spacing: 0.12em;
     color: #625d5d;
-    margin: 20px 0px 22px;
+    margin: 20px 0px 16px;
 }
 
 .variantName {
     font-size: 9px;
     font-weight: 800;
     line-height: 7px;
-}
-
-.uikit {
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 12.6px;
-    letter-spacing: 0.1em;
-    text-align: left;
-}
-
-.foundation {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 12.6px;
-    letter-spacing: 0.1em;
-    text-align: left;
 }
 
 .fontDetails {
@@ -68,12 +59,9 @@
     max-width: 244px;
 }
 
-.variantWrapper {
-    margin-bottom: 40px;
-}
-
-.typographySpacing {
-    margin-bottom: 14px;
+.variantSpacing {
+    margin-bottom: 30px;
+    margin-top: 14px;
 }
 
 .titleFont {

@@ -2,7 +2,6 @@ import { createBoard } from '@wixc3/react-board';
 import styles from './ui-kit-core-components.board.module.scss';
 import commonStyles from '~/styles/common-styles.module.scss';
 import classNames from 'classnames';
-import editIcon from '~/assets/svg/edit.svg';
 import facebookIcon from '~/assets/svg/facebook.svg';
 import twitterxIcon from '~/assets/svg/twitterx.svg';
 import discordIcon from '~/assets/svg/discord.svg';
@@ -10,50 +9,72 @@ import youtubeIcon from '~/assets/svg/youtube.svg';
 import mediumIcon from '~/assets/svg/medium.svg';
 import githubIcon from '~/assets/svg/github.svg';
 import { Link } from '@remix-run/react';
+import { MemoryRouter } from 'react-router-dom';
 
 export default createBoard({
     name: 'UI Kit - Core Components',
     Board: () => (
-        <div className={styles.container}>
-            <div className={styles.uiKitHeader}>
-                <span className={styles.uikit}>UI Kit</span>
-                <span className={styles.coreComponents}>| Core Components</span>
-            </div>
-            <hr className={styles.hrSolid} />
-            <h3 className={styles.sectionTitle}>
-                Buttons
-                <img src={editIcon} alt="edit" className={styles.editIcon} />
-            </h3>
-            <h4 className={styles.sectionHeader}>THEMED</h4>
+        <MemoryRouter>
+            <div className={styles.container}>
+                <div>
+                    <span className={styles.uikit}>UI Kit</span>
+                    <span className={styles.coreComponents}> | Core Components</span>
+                    <hr className={styles.hrSolid} />
+                    <h3 className={styles.sectionTitle}>Buttons</h3>
+                </div>
+                
+                <h4 className={styles.sectionHeader}>THEMED</h4>
 
-            <div className={styles.buttonsContainer}>
-                <button className={classNames(commonStyles.primaryButton, styles.buttonSizing)}>
-                    Primary
-                </button>
-                <button className={classNames(commonStyles.secondaryButton, styles.buttonSizing)}>
-                    Secondary
-                </button>
-            </div>
-            <div className={styles.typographyExample}></div>
-            <hr className={styles.hrLight} />
+                <div className={classNames(styles.buttonsContainer, styles.itemSpacing)}>
+                    <div className={styles.buttonWrapper}>
+                        <button className={classNames(commonStyles.primaryButton)}>Primary</button>
+                        <span className={styles.buttonLabel}>$Primary</span>
+                    </div>
 
-            <h4 className={styles.sectionHeader}>MENU</h4>
-
-            <hr className={styles.hrLight} />
-            <hr className={styles.hrLight} />
-            <h4 className={styles.sectionHeader}>ICONS</h4>
-            <div className={styles.buttonsContainer}>
-                <img className={styles.icon} src={twitterxIcon} alt="twitter" />
-                <img className={styles.icon} src={facebookIcon} alt="facebook" />
-                <img className={styles.icon} src={discordIcon} alt="discord" />
-                <img className={styles.icon} src={youtubeIcon} alt="youtube" />
-                <img className={styles.icon} src={mediumIcon} alt="medium" />
-                <img className={styles.icon} src={githubIcon} alt="github" />
+                    <div className={classNames(styles.buttonWrapper)}>
+                        <button className={classNames(commonStyles.secondaryButton)}>
+                            Secondary
+                        </button>
+                        <span className={styles.buttonLabel}>$Secondary</span>
+                    </div>
+                </div>
+                <hr className={styles.hrLight} />
+                <h4 className={styles.sectionHeader}>MENU</h4>
+                <div className={classNames(styles.menuContainer, styles.itemSpacing)}>
+                    <Link to="" className={classNames(commonStyles.secondaryButton)}>
+                        Home
+                    </Link>
+                    <Link to="" className={classNames(commonStyles.secondaryButton)}>
+                        About
+                    </Link>
+                </div>
+                <hr className={styles.hrLight} />
+                <h4 className={styles.sectionHeader}>ICONS</h4>
+                <div className={styles.buttonsContainer}>
+                    <a href="/">
+                        <img className={styles.icon} src={twitterxIcon} alt="twitter" />
+                    </a>
+                    <a href="/">
+                        <img className={styles.icon} src={facebookIcon} alt="facebook" />
+                    </a>
+                    <a href="/">
+                        <img className={styles.icon} src={discordIcon} alt="discord" />
+                    </a>
+                    <a href="/">
+                        <img className={styles.icon} src={youtubeIcon} alt="youtube" />
+                    </a>
+                    <a href="/">
+                        <img className={styles.icon} src={mediumIcon} alt="medium" />
+                    </a>
+                    <a href="/">
+                        <img className={styles.icon} src={githubIcon} alt="github" />
+                    </a>
+                </div>
             </div>
-        </div>
+        </MemoryRouter>
     ),
     isSnippet: true,
     environmentProps: {
-        windowWidth: 362,
+        windowWidth: 291,
     },
 });
