@@ -2,7 +2,7 @@
 
 .intro-button {
     text-align: center;
-    font: $small-font;
+    font: $paragraph-small-font;
     background-color: $snow-white;
     padding: 10px;
     width: 160px;
@@ -20,7 +20,7 @@
     background-color: $black;
     display: flex;
     align-items: center;
-    font: $small-font;
+    font: $paragraph-small-font;
     color: $snow-white;
     border-radius: 35px;
     height: 42px;
@@ -39,7 +39,7 @@
     height: 42px;
     display: flex;
     align-items: center;
-    font: $small-font;
+    font: $paragraph-small-font;
     border: 1px solid transparent;
     cursor: pointer;
     padding-right: 22px;
@@ -55,15 +55,10 @@
     height: 25px;
     width: 60px;
     padding-right: 10px;
-    font: $small-font;
+    font: $paragraph-small-font;
 }
 
 .price {
     font-weight: 700;
     margin-top: 2px;
-}
-
-.loading {
-    padding: 30px;
-    font: $large-font;
 }

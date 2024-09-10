@@ -36,11 +36,11 @@ export default createBoard({
                 $paragraph-font:
                 <span className={styles.fontDetails}> DM Sans (300) / 1.3rem / 1.3</span>
             </p>
-            <p className={classNames(styles.smallParagraphFont)}>
+            <p className={styles.paragraphSmallFont}>
                 We ignite opportunity by setting the world in motion. 0123456789
             </p>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                $small-paragrapg-font:
+                $paragraph-small-font:
                 <span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.3</span>
             </p>
         </div>

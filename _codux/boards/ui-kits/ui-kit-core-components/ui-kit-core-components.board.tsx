@@ -37,7 +37,6 @@ export default createBoard({
                         </button>
                         <span className={styles.buttonLabel}>$Secondary</span>
                     </div>
-                    
                 </div>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>MENU</h4>
@@ -76,6 +75,7 @@ export default createBoard({
     ),
     isSnippet: true,
     environmentProps: {
-        windowWidth: 291,
+        windowWidth: 284,
+        windowHeight: 525,
     },
 });
