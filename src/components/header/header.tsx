@@ -40,7 +40,7 @@ export const Header = ({ className }: HeaderProps) => {
                     Upload file
                 </Link>
                 <Link
-                    to="/cookie-page"
+                    to="/sessions"
                     className={classNames(commonStyles.secondaryButton, styles.menuButton)}
                 >
                     Sessions

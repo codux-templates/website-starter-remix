@@ -1,27 +1,13 @@
-import {
-    json,
-    createCookie,
-    createFileSessionStorage,
-    type LoaderFunctionArgs,
-    createCookieSessionStorage,
-    createMemorySessionStorage,
-    createSessionStorage,
-} from '@remix-run/node';
-import { useLoaderData, Form } from '@remix-run/react';
+import { json, type LoaderFunctionArgs } from '@remix-run/node';
+import { Form, useLoaderData } from '@remix-run/react';
 import { useState } from 'react';
+import { commitSession, getSession } from './file-session-storage.server'; // ------------------> first
 
 /**
  * This file have 5 examples of session functions of some kind from remix-run/node-
  * createFileSessionStorage, createCookie, createCookieSessionStorage, createMemorySessionStorage, createSessionStorage,
  * that we do not support.
  */
-
-// Create file-based session storage
-const { getSession, commitSession } = createFileSessionStorage({
-    // --------------------------------------------------------------------------------------> first
-    dir: './sessions',
-    cookie: { name: 'sessionId' },
-});
 
 // Create a cookie
 // const myCookie = createCookie('myCookieName', { maxAge: 3600 }); // --------------------------> second
