@@ -10,7 +10,7 @@ export default function AboutPage() {
     return (
         <div className={styles.root}>
             <div className={styles.text}>
-                <h1 className={styles.title}>I&apos;M AN ABOUT PAGE</h1>
+                <h1 className={styles.title}>I'M A TITLE</h1>
                 <p className={styles.paragraph}>
                     I’m a paragraph. Add your own text and edit me on properties panel on the right.
                     It’s easy. Just select me and make changes to the font on the styles panel on
