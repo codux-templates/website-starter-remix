@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import { Link, NavLink } from '@remix-run/react';
 import { ROUTES } from '~/router/config';
-import commonStyles from '~/styles/common-styles.module.scss';
 import styles from './header.module.scss';
 
 export interface HeaderProps {
