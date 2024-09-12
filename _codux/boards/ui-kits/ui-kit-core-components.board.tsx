@@ -1,5 +1,5 @@
 import { createBoard, Variant } from '@wixc3/react-board';
-import styles from '../../../src/styles/ui-kit-core-components.module.scss';
+import styles from '../../../src/styles/ui-kit-buttons.module.scss';
 import commonStyles from '~/styles/common-styles.module.scss';
 import classNames from 'classnames';
 import facebookIcon from '~/assets/svg/facebook.svg';
@@ -12,7 +12,7 @@ import { NavLink } from '@remix-run/react';
 import { MemoryRouter } from 'react-router-dom';
 
 export default createBoard({
-    name: 'UI Kit - Core Components',
+    name: 'UI Kit - Buttons',
     Board: () => (
         <MemoryRouter>
             <div className={styles.container}>
