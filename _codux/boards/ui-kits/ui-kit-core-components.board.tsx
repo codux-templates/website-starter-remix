@@ -1,5 +1,5 @@
-import { createBoard } from '@wixc3/react-board';
-import styles from './ui-kit-core-components.board.module.scss';
+import { createBoard, Variant } from '@wixc3/react-board';
+import styles from '../../../src/styles/ui-kit-core-components.module.scss';
 import commonStyles from '~/styles/common-styles.module.scss';
 import classNames from 'classnames';
 import facebookIcon from '~/assets/svg/facebook.svg';
@@ -27,14 +27,20 @@ export default createBoard({
 
                 <div className={classNames(styles.buttonsContainer, styles.itemSpacing)}>
                     <div>
-                        <button className={classNames(commonStyles.primaryButton)}>Primary</button>
+                        <Variant name="Primary Button">
+                            <button className={classNames(commonStyles.primaryButton)}>
+                                Primary
+                            </button>
+                        </Variant>
                         <span className={styles.buttonLabel}>$Primary</span>
                     </div>
 
                     <div>
-                        <button className={classNames(commonStyles.secondaryButton)}>
-                            Secondary
-                        </button>
+                        <Variant name="Secondary Button">
+                            <button className={classNames(commonStyles.secondaryButton)}>
+                                Secondary
+                            </button>
+                        </Variant>
                         <span className={styles.buttonLabel}>$Secondary</span>
                     </div>
                 </div>
@@ -44,9 +50,11 @@ export default createBoard({
                     <Link to="" className={commonStyles.secondaryButton}>
                         Home
                     </Link>
-                    <Link to="" className={commonStyles.secondaryButton}>
-                        About
-                    </Link>
+                    <Variant name="Menu Link">
+                        <Link to="" className={commonStyles.secondaryButton}>
+                            About
+                        </Link>
+                    </Variant>
                 </div>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>ICONS</h4>
@@ -58,7 +66,9 @@ export default createBoard({
                         <img className={styles.icon} src={facebookIcon} alt="facebook" />
                     </a>
                     <a href="/">
-                        <img className={styles.icon} src={discordIcon} alt="discord" />
+                        <Variant name="Social Media Icon">
+                            <img className={styles.icon} src={discordIcon} alt="discord" />
+                        </Variant>
                     </a>
                     <a href="/">
                         <img className={styles.icon} src={youtubeIcon} alt="youtube" />

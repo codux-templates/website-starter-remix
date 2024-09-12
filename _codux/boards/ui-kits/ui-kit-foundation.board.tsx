@@ -1,5 +1,5 @@
-import { createBoard } from '@wixc3/react-board';
-import styles from './ui-kit-foundation.board.module.scss';
+import { createBoard, Variant } from '@wixc3/react-board';
+import styles from '../../../src/styles/ui-kit-foundation.module.scss';
 import classNames from 'classnames';
 
 export default createBoard({
@@ -15,13 +15,17 @@ export default createBoard({
 
             <h4 className={styles.sectionHeader}>Heading</h4>
 
-            <h1 className={styles.titleFont}>Heading 1</h1>
+            <Variant name="Title Font">
+                <h1 className={styles.titleFont}>Heading 1</h1>
+            </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
                 $title-font:
                 <span className={styles.fontDetails}> DM Sans (200) / 4rem / 1.4</span>
             </p>
 
-            <h2 className={classNames(styles.smallTitleFont)}>Heading 6</h2>
+            <Variant name="Small Title font">
+                <h2 className={classNames(styles.smallTitleFont)}>Heading 6</h2>
+            </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
                 $small-title-font:
                 <span className={styles.fontDetails}> DM Sans (400) / 1rem / 1.4</span>
@@ -29,25 +33,29 @@ export default createBoard({
 
             <hr className={styles.hrLight} />
             <h4 className={styles.sectionHeader}>Paragraph</h4>
-            <p className={classNames(styles.paragraphFont)}>
-                We ignite opportunity by setting the world in motion. 0123456789
-            </p>
+            <Variant name="Paragraph Font">
+                <p className={classNames(styles.paragraphFont)}>
+                    We ignite opportunity by setting the world in motion. 0123456789
+                </p>
+            </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
                 $paragraph-font:
                 <span className={styles.fontDetails}> DM Sans (300) / 1.3rem / 1.3</span>
             </p>
-            <p className={styles.paragraphSmallFont}>
-                We ignite opportunity by setting the world in motion. 0123456789
-            </p>
+            <Variant name="Paragraph Small Font">
+                <p className={styles.paragraphSmallFont}>
+                    We ignite opportunity by setting the world in motion. 0123456789
+                </p>
+            </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
                 $paragraph-small-font:
                 <span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.3</span>
             </p>
         </div>
     ),
-    isSnippet: false,
+    isSnippet: true,
     environmentProps: {
-        windowWidth: 339,
+        windowWidth: 280,
         windowHeight: 606,
     },
 });
