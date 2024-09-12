@@ -1,9 +1,9 @@
 import { createBoard, Variant } from '@wixc3/react-board';
-import styles from '../../../src/styles/ui-kit-foundation.module.scss';
+import styles from '../../../src/styles/ui-kit-typography.module.scss';
 import classNames from 'classnames';
 
 export default createBoard({
-    name: 'UI Kit - Foundation',
+    name: 'UI Kit - Typography',
     Board: () => (
         <div className={styles.container}>
             <div>
