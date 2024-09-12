@@ -58,4 +58,5 @@ export default createBoard({
         windowWidth: 282,
         windowHeight: 606,
     },
+    tags: ["UI Kit"]
 });
