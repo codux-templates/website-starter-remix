@@ -66,24 +66,36 @@ export default createBoard({
                 <h4 className={styles.sectionHeader}>ICONS</h4>
                 <Variant name="Social Media Row">
                     <div className={styles.iconsContainer}>
-                        <a href="/">
-                            <img className={styles.icon} src={twitterxIcon} alt="twitter" />
-                        </a>
-                        <a href="/">
-                            <img className={styles.icon} src={facebookIcon} alt="facebook" />
-                        </a>
-                        <a href="/">
-                            <img className={styles.icon} src={discordIcon} alt="discord" />
-                        </a>
-                        <a href="/">
-                            <img className={styles.icon} src={youtubeIcon} alt="youtube" />
-                        </a>
-                        <a href="/">
-                            <img className={styles.icon} src={mediumIcon} alt="medium" />
-                        </a>
-                        <a href="/">
-                            <img className={styles.icon} src={githubIcon} alt="github" />
-                        </a>
+                        <Variant name="X Icon">
+                            <a href="/">
+                                <img className={styles.icon} src={twitterxIcon} alt="twitter" />
+                            </a>
+                        </Variant>
+                        <Variant name="Facebook Icon">
+                            <a href="/">
+                                <img className={styles.icon} src={facebookIcon} alt="facebook" />
+                            </a>
+                        </Variant>
+                        <Variant name="Discord Icon">
+                            <a href="/">
+                                <img className={styles.icon} src={discordIcon} alt="discord" />
+                            </a>
+                        </Variant>
+                        <Variant name="Youtube Icon">
+                            <a href="/">
+                                <img className={styles.icon} src={youtubeIcon} alt="youtube" />
+                            </a>
+                        </Variant>
+                        <Variant name="Medium Icon">
+                            <a href="/">
+                                <img className={styles.icon} src={mediumIcon} alt="medium" />
+                            </a>
+                        </Variant>
+                        <Variant name="Github Icon">
+                            <a href="/">
+                                <img className={styles.icon} src={githubIcon} alt="github" />
+                            </a>
+                        </Variant>
                     </div>
                 </Variant>
             </div>
