@@ -28,12 +28,6 @@ export const Header = ({ className }: HeaderProps) => {
                     Contacts
                 </Link>
                 <Link
-                    to="/install-globals"
-                    className={classNames(commonStyles.secondaryButton, styles.menuButton)}
-                >
-                    Install-globals
-                </Link>
-                <Link
                     to="/upload-file"
                     className={classNames(commonStyles.secondaryButton, styles.menuButton)}
                 >
