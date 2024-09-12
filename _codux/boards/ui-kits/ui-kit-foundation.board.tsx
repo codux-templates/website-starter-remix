@@ -42,20 +42,20 @@ export default createBoard({
                 $paragraph-font:
                 <span className={styles.fontDetails}> DM Sans (300) / 1.3rem / 1.3</span>
             </p>
-            <Variant name="Paragraph Small Font">
+            <Variant name="Small Paragraph Font">
                 <p className={styles.paragraphSmallFont}>
                     We ignite opportunity by setting the world in motion. 0123456789
                 </p>
             </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                $paragraph-small-font:
+                $small-paragraph-font:
                 <span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.3</span>
             </p>
         </div>
     ),
     isSnippet: true,
     environmentProps: {
-        windowWidth: 280,
+        windowWidth: 282,
         windowHeight: 606,
     },
 });

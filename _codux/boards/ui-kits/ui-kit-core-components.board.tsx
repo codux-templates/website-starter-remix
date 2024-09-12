@@ -8,7 +8,7 @@ import discordIcon from '~/assets/svg/discord.svg';
 import youtubeIcon from '~/assets/svg/youtube.svg';
 import mediumIcon from '~/assets/svg/medium.svg';
 import githubIcon from '~/assets/svg/github.svg';
-import { Link } from '@remix-run/react';
+import { NavLink } from '@remix-run/react';
 import { MemoryRouter } from 'react-router-dom';
 
 export default createBoard({
@@ -46,40 +46,46 @@ export default createBoard({
                 </div>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>MENU</h4>
-                <div className={classNames(styles.menuContainer, styles.itemSpacing)}>
-                    <Link to="" className={commonStyles.secondaryButton}>
-                        Home
-                    </Link>
-                    <Variant name="Menu Link">
-                        <Link to="" className={commonStyles.secondaryButton}>
+                <Variant name="Menu">
+                    <div className={classNames(styles.menu, styles.itemSpacing)}>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                        >
+                            Home
+                        </NavLink>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                        >
                             About
-                        </Link>
-                    </Variant>
-                </div>
+                        </NavLink>
+                    </div>
+                </Variant>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>ICONS</h4>
-                <div className={styles.iconsContainer}>
-                    <a href="/">
-                        <img className={styles.icon} src={twitterxIcon} alt="twitter" />
-                    </a>
-                    <a href="/">
-                        <img className={styles.icon} src={facebookIcon} alt="facebook" />
-                    </a>
-                    <a href="/">
-                        <Variant name="Social Media Icon">
+                <Variant name="Social Media Row">
+                    <div className={styles.iconsContainer}>
+                        <a href="/">
+                            <img className={styles.icon} src={twitterxIcon} alt="twitter" />
+                        </a>
+                        <a href="/">
+                            <img className={styles.icon} src={facebookIcon} alt="facebook" />
+                        </a>
+                        <a href="/">
                             <img className={styles.icon} src={discordIcon} alt="discord" />
-                        </Variant>
-                    </a>
-                    <a href="/">
-                        <img className={styles.icon} src={youtubeIcon} alt="youtube" />
-                    </a>
-                    <a href="/">
-                        <img className={styles.icon} src={mediumIcon} alt="medium" />
-                    </a>
-                    <a href="/">
-                        <img className={styles.icon} src={githubIcon} alt="github" />
-                    </a>
-                </div>
+                        </a>
+                        <a href="/">
+                            <img className={styles.icon} src={youtubeIcon} alt="youtube" />
+                        </a>
+                        <a href="/">
+                            <img className={styles.icon} src={mediumIcon} alt="medium" />
+                        </a>
+                        <a href="/">
+                            <img className={styles.icon} src={githubIcon} alt="github" />
+                        </a>
+                    </div>
+                </Variant>
             </div>
         </MemoryRouter>
     ),
