@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5em;
-    font: var(--paragraph-font);
+    font: var(--paragraph1);
 
     @media only screen and (max-width: $mobile-width) {
         font-size: 1rem;
