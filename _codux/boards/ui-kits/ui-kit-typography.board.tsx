@@ -25,7 +25,7 @@ export default createBoard({
                 <h2 className={classNames(styles.smallTitleFont)}>Heading 6</h2>
             </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                $small-title-font:
+                --heading2:
                 <span className={styles.fontDetails}> DM Sans (400) / 1rem / 1.4</span>
             </p>
 
@@ -37,7 +37,7 @@ export default createBoard({
                 </p>
             </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                var(--paragraph-font):
+                --paragraph-font:
                 <span className={styles.fontDetails}> DM Sans (300) / 1.3rem / 1.3</span>
             </p>
             <Variant name="Small Paragraph Font">
@@ -46,7 +46,7 @@ export default createBoard({
                 </p>
             </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                var(--small-paragraph-font):
+                --small-paragraph-font:
                 <span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.3</span>
             </p>
         </div>
