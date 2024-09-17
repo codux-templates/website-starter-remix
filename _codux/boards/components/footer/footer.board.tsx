@@ -9,4 +9,5 @@ export default createBoard({
             <Footer />
         </ComponentWrapper>
     ),
+    isSnippet: true,
 });

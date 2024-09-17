@@ -9,4 +9,5 @@ export default createBoard({
             <Header />
         </ComponentWrapper>
     ),
+    isSnippet: true,
 });
