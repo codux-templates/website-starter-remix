@@ -26,6 +26,12 @@
     font-weight: 600;
 }
 
+.logo {
+    font: 700 18px/1.5 var(--my-pretty-font);
+    height: fit-content;
+}
+
+
 @media (width < 455px) {
     .root {
         display: flex;
