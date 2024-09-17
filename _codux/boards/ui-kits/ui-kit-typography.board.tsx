@@ -13,14 +13,12 @@ export default createBoard({
                 <h3 className={styles.sectionTitle}>Typography</h3>
             </div>
 
-            <h4 className={styles.sectionHeader}>Heading</h4>
-
-            <Variant name="Title Font">
-                <h1 className={styles.titleFont}>Heading 1</h1>
+            <h4 className={styles.sectionHeader}>HEADING</h4>
+            <Variant name="Heading 1">
+                <h1 className={styles.heading1}>Heading 1</h1>
             </Variant>
-            <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                $title-font:
-                <span className={styles.fontDetails}> DM Sans (200) / 4rem / 1.4</span>
+            <p className={classNames(styles.variantName, styles.headlinesSpacing)}>
+                --heading1:<span className={styles.fontDetails}> DM Sans (100) / 65px / 1.2</span>
             </p>
 
             <Variant name="Small Title font">
