@@ -1,5 +1,4 @@
 
-
 .container {
     font-family: Wix Madefor Text;
     width: 284px;
@@ -18,7 +17,7 @@
     letter-spacing: 0.1em;
 }
 .active {
-    color: $black;
+    color: var(--black);
     font-weight: 600;
 }
 

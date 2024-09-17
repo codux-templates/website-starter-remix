@@ -1,34 +1,34 @@
 .intro-button {
     text-align: center;
     font: $small-paragraph-font;
-    background-color: $snow-white;
+    background-color: var(--snow-white);
     padding: 10px;
     width: 160px;
-    color: $charcoal-black;
+    color: var(--charcoal-black);
     border-radius: 30px;
     margin-top: 20px;
     cursor: pointer;
     &:hover {
         background-color: #b6c1f0;
-        color: $black;
+        color: var(--black);
     }
 }
 
 .primaryButton {
-    background-color: $black;
+    background-color: var(--black);
     display: flex;
     align-items: center;
     font: $small-paragraph-font;
-    color: $snow-white;
+    color: var(--snow-white);
     border-radius: 35px;
     height: 42px;
     padding-left: 22px;
     padding-right: 22px;
-    border: 1px solid $charcoal-black;
+    border: 1px solid var(--charcoal-black);
     z-index: 1;
 
     &:hover {
-        background-color: $charcoal-black;
+        background-color: var(--charcoal-black);
         cursor: pointer;
     }
 }
@@ -42,12 +42,12 @@
     cursor: pointer;
     padding-right: 22px;
     padding-left: 22px;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     z-index: 1;
 }
 
 .numberInput {
-    border: 1px solid $black;
+    border: 1px solid var(--black);
     border-radius: 5px;
     padding-left: 10px;
     height: 25px;
