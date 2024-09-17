@@ -32,7 +32,7 @@ export default createBoard({
                                 Primary
                             </button>
                         </Variant>
-                        <span className={styles.buttonLabel}>$Primary</span>
+                        <span className={styles.buttonLabel}>Primary</span>
                     </div>
 
                     <div>
@@ -41,7 +41,7 @@ export default createBoard({
                                 Secondary
                             </button>
                         </Variant>
-                        <span className={styles.buttonLabel}>$Secondary</span>
+                        <span className={styles.buttonLabel}>Secondary</span>
                     </div>
                 </div>
                 <hr className={styles.hrLight} />
@@ -63,7 +63,7 @@ export default createBoard({
                     </div>
                 </Variant>
                 <hr className={styles.hrLight} />
-                <h4 className={styles.sectionHeader}>SOCIAL ICONS</h4>
+                <h4 className={styles.sectionHeader}>SOCIAL</h4>
                 <Variant name="Social Media Row">
                     <div className={styles.iconsContainer}>
                         <Variant name="X Icon">
@@ -106,5 +106,5 @@ export default createBoard({
         windowWidth: 284,
         windowHeight: 525,
     },
-    tags: ["UI Kit"]
+    tags: ['UI Kit'],
 });
