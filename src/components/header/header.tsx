@@ -17,7 +17,7 @@ export const Header = ({ className }: HeaderProps) => {
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        classNames(styles.menuButton, { [styles.activeMenuItem]: isActive })
+                        classNames(styles.menuButton, { [styles.active]: isActive })
                     }
                 >
                     Home
@@ -25,12 +25,12 @@ export const Header = ({ className }: HeaderProps) => {
                 <NavLink
                     to={ROUTES.about.to()}
                     className={({ isActive }) =>
-                        classNames(styles.menuButton, { [styles.activeMenuItem]: isActive })
+                        classNames(styles.menuButton, { [styles.active]: isActive })
                     }
                 >
                     About
                 </NavLink>
             </div>
-        </div >
+        </div>
     );
 };
