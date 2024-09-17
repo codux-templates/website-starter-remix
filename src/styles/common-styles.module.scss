@@ -1,6 +1,6 @@
 .intro-button {
     text-align: center;
-    font: var(--small-paragraph-font);
+    font: var(--paragraph2);
     background-color: var(--snow-white);
     padding: 10px;
     width: 160px;
@@ -18,7 +18,7 @@
     background-color: var(--black);
     display: flex;
     align-items: center;
-    font: var(--small-paragraph-font);
+    font: --var(--paragraph2);
     color: var(--snow-white);
     border-radius: 35px;
     height: 42px;
@@ -37,7 +37,7 @@
     height: 42px;
     display: flex;
     align-items: center;
-    font: var(--small-paragraph-font);
+    font: var(--paragraph2);
     border: 1px solid transparent;
     cursor: pointer;
     padding-right: 22px;
@@ -53,7 +53,7 @@
     height: 25px;
     width: 60px;
     padding-right: 10px;
-    font: var(--small-paragraph-font);
+    font: --var(--paragraph2);
 }
 
 .price {

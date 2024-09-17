@@ -21,33 +21,33 @@ export default createBoard({
                 --heading1:<span className={styles.fontDetails}> DM Sans (100) / 65px / 1.2</span>
             </p>
 
-            <Variant name="Small Title font">
-                <h2 className={classNames(styles.smallTitleFont)}>Heading 6</h2>
+            <Variant name="Heading 2">
+                <h2 className={classNames(styles.heading2)}>HEADING 2</h2>
             </Variant>
-            <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                --heading2:
-                <span className={styles.fontDetails}> DM Sans (400) / 1rem / 1.4</span>
+            <p className={classNames(styles.variantName, styles.headlinesSpacing)}>
+                --heading2:<span className={styles.fontDetails}> DM Sans (200) / 45px / 1.4</span>
             </p>
 
             <hr className={styles.hrLight} />
             <h4 className={styles.sectionHeader}>Paragraph</h4>
-            <Variant name="Paragraph Font">
-                <p className={classNames(styles.paragraphFont)}>
-                    We ignite opportunity by setting the world in motion. 0123456789
+
+            <Variant name="Paragraph 1">
+                <p className={styles.paragraph1}>
+                    The quick brown fox jumps over the lazy dog. 0123456789
                 </p>
             </Variant>
-            <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                --paragraph-font:
-                <span className={styles.fontDetails}> DM Sans (300) / 1.3rem / 1.3</span>
+            <p className={classNames(styles.variantName, styles.paragraphSpacing)}>
+                --paragraph1:
+                <span className={styles.fontDetails}> DM Sans (300) / 1.3 / 1.3</span>
             </p>
-            <Variant name="Small Paragraph Font">
-                <p className={styles.paragraphSmallFont}>
-                    We ignite opportunity by setting the world in motion. 0123456789
+
+            <Variant name="Paragraph 2">
+                <p className={styles.paragraph2}>
+                    The quick brown fox jumps over the lazy dog. 0123456789
                 </p>
             </Variant>
-            <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                --small-paragraph-font:
-                <span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.3</span>
+            <p className={classNames(styles.variantName, styles.paragraphSpacing)}>
+                --paragraph2:<span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.4</span>
             </p>
         </div>
     ),
@@ -56,5 +56,5 @@ export default createBoard({
         windowWidth: 282,
         windowHeight: 606,
     },
-    tags: ["UI Kit"]
+    tags: ['UI Kit'],
 });
