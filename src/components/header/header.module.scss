@@ -2,28 +2,27 @@
 
 .root {
     display: flex;
-    flex-direction: row;
-    padding-left: 3em;
     justify-content: space-between;
-    padding-right: 3.5em;
     align-items: center;
-    height: 4em;
-    font: var(--paragraph2);}
+    height: 64px;
+    font: var(--paragraph2);
+    padding: 0 20px;
+}
 
 .menu {
     display: flex;
-    column-gap: 2rem;
-    font: var(--paragraph2);
+    align-items: center;
 }
 
 .menuButton {
     padding-right: 22px;
     padding-left: 22px;
+    font: var(--button-font);
+
 }
 
-.active {
-    color: var(--black);
-    font-weight: 600;
+.activeMenuItem {
+    font-weight: 500;
 }
 
 .logo {

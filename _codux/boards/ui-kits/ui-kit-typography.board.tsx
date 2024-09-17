@@ -18,14 +18,14 @@ export default createBoard({
                 <h1 className={styles.heading1}>Heading 1</h1>
             </Variant>
             <p className={classNames(styles.variantName, styles.headlinesSpacing)}>
-                --heading1:<span className={styles.fontDetails}> DM Sans (100) / 65px / 1.2</span>
+                --heading1:<span className={styles.fontDetails}> DM Sans (300) / 4rem / 1.4</span>
             </p>
 
             <Variant name="Heading 2">
-                <h2 className={classNames(styles.heading2)}>HEADING 2</h2>
+                <h6 className={classNames(styles.heading2)}>HEADING 6</h6>
             </Variant>
             <p className={classNames(styles.variantName, styles.headlinesSpacing)}>
-                --heading2:<span className={styles.fontDetails}> DM Sans (200) / 45px / 1.4</span>
+                --heading2:<span className={styles.fontDetails}> DM Sans (400) / 1rem / 1.4</span>
             </p>
 
             <hr className={styles.hrLight} />
@@ -53,7 +53,7 @@ export default createBoard({
     ),
     isSnippet: true,
     environmentProps: {
-        windowWidth: 282,
+        windowWidth: 322,
         windowHeight: 606,
     },
     tags: ['UI Kit'],
