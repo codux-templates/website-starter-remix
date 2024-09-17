@@ -64,7 +64,7 @@
 }
 
 .titleFont {
-    font: $title-font;
+    font: var(--heading1);
 }
 
 .smallTitleFont {
@@ -72,9 +72,9 @@
 }
 
 .paragrapghFont {
-    font: $paragraph-font;
+    font: var(--paragraph-font);
 }
 
 .paragraphSmallFont {
-    font: $small-paragraph-font;
+    font: var(--small-paragraph-font);
 }

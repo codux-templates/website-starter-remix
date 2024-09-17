@@ -37,7 +37,7 @@ export default createBoard({
                 </p>
             </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                $paragraph-font:
+                var(--paragraph-font):
                 <span className={styles.fontDetails}> DM Sans (300) / 1.3rem / 1.3</span>
             </p>
             <Variant name="Small Paragraph Font">
@@ -46,7 +46,7 @@ export default createBoard({
                 </p>
             </Variant>
             <p className={classNames(styles.variantName, styles.variantSpacing)}>
-                $small-paragraph-font:
+                var(--small-paragraph-font):
                 <span className={styles.fontDetails}> DM Sans (200) / 1rem / 1.3</span>
             </p>
         </div>
