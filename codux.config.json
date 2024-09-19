@@ -41,7 +41,11 @@
       "node:stream": false,
       "stream": false,
       "node:os": false,
-      "node:util": false
+      "node:util": false,
+      "node:events": false,
+      "node:url": false,
+      "node:buffer": false,
+      "node:assert": false
     }
   },
   "svgLoader": "both"
