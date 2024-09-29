@@ -16,33 +16,33 @@ export default createBoard({
     Board: () => (
         <MemoryRouter>
             <div className={styles.container}>
-                <div>
+                <section>
                     <span className={styles.uikit}>UI Kit</span>
                     <span className={styles.coreComponents}> | Core Components</span>
                     <hr className={styles.hrSolid} />
                     <h3 className={styles.sectionTitle}>Buttons</h3>
-                </div>
+                </section>
 
                 <h4 className={styles.sectionHeader}>THEMED</h4>
 
                 <div className={classNames(styles.buttonsContainer, styles.itemSpacing)}>
-                    <div>
+                    <section>
                         <Variant name="Primary Button">
                             <button className={classNames(commonStyles.primaryButton)}>
                                 Primary
                             </button>
                         </Variant>
                         <span className={styles.buttonLabel}>Primary</span>
-                    </div>
+                    </section>
 
-                    <div>
+                    <section>
                         <Variant name="Secondary Button">
                             <button className={classNames(commonStyles.secondaryButton)}>
                                 Secondary
                             </button>
                         </Variant>
                         <span className={styles.buttonLabel}>Secondary</span>
-                    </div>
+                    </section>
                 </div>
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>MENU</h4>

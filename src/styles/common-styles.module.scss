@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import './typography.scss';
 
 .intro-button {
     text-align: center;
@@ -20,7 +21,7 @@
     background-color: var(--black);
     display: flex;
     align-items: center;
-    font: --var(--paragraph2);
+    font: var(--paragraph2);
     color: var(--snow-white);
     border-radius: 35px;
     height: 42px;
