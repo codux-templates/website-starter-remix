@@ -16,13 +16,17 @@ export const Header = ({ className }: HeaderProps) => {
             <div className={styles.menu}>
                 <NavLink
                     to="/"
-                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                    className={({ isActive }) =>
+                        classNames(styles.menuButton, { [styles.active]: isActive })
+                    }
                 >
                     Home
                 </NavLink>
                 <NavLink
                     to={ROUTES.about.to()}
-                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                    className={({ isActive }) =>
+                        classNames(styles.menuButton, { [styles.active]: isActive })
+                    }
                 >
                     About
                 </NavLink>

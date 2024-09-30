@@ -1,10 +1,9 @@
-@import '@styles/theme.module.scss';
+
 
 .root {
-    font: $large-font;
     display: flex;
     flex-direction: row;
-    background-color: $snow-white;
+    background-color: var(--snow-white);
     padding-top: 2em;
     padding-bottom: 3em;
     justify-content: center;
@@ -15,7 +14,7 @@
 
 .paragraph {
     margin-bottom: 1.5em;
-    font: $paragraph-font;
+    font: var(--paragraph1);
 }
 
 .text {
@@ -32,7 +31,7 @@
 }
 
 .title {
-    font: $title-font;
+    font: var(--heading1);
     letter-spacing: 0.4rem;
 }
 
