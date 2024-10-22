@@ -52,9 +52,6 @@ export default createBoard({
         </div>
     ),
     isSnippet: true,
-    environmentProps: {
-        windowWidth: 322,
-        windowHeight: 606,
-    },
+    environmentProps: { windowHeight: 600, windowWidth: 320 },
     tags: ['UI Kit'],
 });
