@@ -25,7 +25,7 @@ export default createBoard({
 
                 <h4 className={styles.sectionHeader}>THEMED</h4>
 
-                <div className={classNames(styles.buttonsContainer, styles.itemSpacing)}>
+                <div className={classNames(styles.buttonsContainer)}>
                     <section>
                         <Variant name="Primary Button">
                             <button className={classNames(commonStyles.primaryButton)}>
@@ -47,7 +47,7 @@ export default createBoard({
                 <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>MENU</h4>
                 <Variant name="Menu">
-                    <div className={classNames(styles.menu, styles.itemSpacing)}>
+                    <div className={classNames(styles.menu)}>
                         <NavLink
                             to="/"
                             className={({ isActive }) => classNames({ [styles.active]: isActive })}
@@ -103,7 +103,7 @@ export default createBoard({
     ),
     isSnippet: true,
     environmentProps: {
-        windowWidth: 284,
+        windowWidth: 320,
         windowHeight: 525,
     },
     tags: ['UI Kit'],
