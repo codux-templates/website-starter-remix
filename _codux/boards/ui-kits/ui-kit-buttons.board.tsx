@@ -1,20 +1,20 @@
+import { NavLink } from '@remix-run/react';
 import { createBoard, Variant } from '@wixc3/react-board';
-import styles from '../../../src/styles/ui-kit-buttons.module.scss';
-import commonStyles from '~/styles/common-styles.module.scss';
 import classNames from 'classnames';
+import ComponentWrapper from '_codux/board-wrappers/component-wrapper';
 import facebookIcon from '~/assets/svg/facebook.svg';
 import twitterxIcon from '~/assets/svg/twitterx.svg';
 import discordIcon from '~/assets/svg/discord.svg';
 import youtubeIcon from '~/assets/svg/youtube.svg';
 import mediumIcon from '~/assets/svg/medium.svg';
 import githubIcon from '~/assets/svg/github.svg';
-import { NavLink } from '@remix-run/react';
-import { MemoryRouter } from 'react-router-dom';
+import commonStyles from '~/styles/common-styles.module.scss';
+import styles from '../../../src/styles/ui-kit-buttons.module.scss';
 
 export default createBoard({
     name: 'UI Kit - Buttons',
     Board: () => (
-        <MemoryRouter>
+        <ComponentWrapper>
             <div className={styles.container}>
                 <section>
                     <span className={styles.uikit}>UI Kit</span>
@@ -99,7 +99,7 @@ export default createBoard({
                     </div>
                 </Variant>
             </div>
-        </MemoryRouter>
+        </ComponentWrapper>
     ),
     isSnippet: true,
     environmentProps: {
