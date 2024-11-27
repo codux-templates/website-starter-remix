@@ -63,6 +63,9 @@ export default createBoard({
                     </div>
                 </Variant>
                 <hr className={styles.hrLight} />
+                <h4 className={styles.sectionHeader}>LINK</h4>
+                <a href="/" className={styles.linkButton}>Link Button</a>
+                <hr className={styles.hrLight} />
                 <h4 className={styles.sectionHeader}>SOCIAL</h4>
                 <Variant name="Social Media Row">
                     <div className={styles.iconsContainer}>
