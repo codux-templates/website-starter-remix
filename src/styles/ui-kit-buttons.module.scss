@@ -66,6 +66,13 @@
     justify-content: space-around;
 }
 
+.linkButton {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .iconsContainer {
     display: flex;
     justify-content: space-between;
