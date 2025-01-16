@@ -1,5 +1,5 @@
-@import '@styles/general';
-@import '@styles/typography.scss';
+@use '@styles/general' as general;
+@use '@styles/typography.scss' as typography;
 
 .root {
     display: flex;
@@ -27,7 +27,7 @@
     height: 30px;
 }
 
-@media (width <= $mobile-width) {
+@media (width <= general.$mobile-width) {
     .root {
         flex-direction: column;
         row-gap: 24px;
