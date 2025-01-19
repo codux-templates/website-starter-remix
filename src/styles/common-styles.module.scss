@@ -1,5 +1,5 @@
-@import './colors.scss';
-@import './typography.scss';
+@use './colors.scss';
+@use './typography.scss';
 
 .intro-button {
     text-align: center;
@@ -34,7 +34,7 @@
 
 .primaryButton:hover {
     background-color: var(--white);
-    border: 1px solid var(--charcoal-black);	   
+    border: 1px solid var(--charcoal-black);
     color: var(--charcoal-black);
 }
 
@@ -49,7 +49,7 @@
     border: 1px solid var(--charcoal-black);
     border-radius: 35px;
     z-index: 1;
-        &:hover {
+    &:hover {
         background-color: #729991;
         border: 1px solid #729991;
         color: var(--white);
